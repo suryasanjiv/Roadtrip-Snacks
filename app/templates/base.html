@@ -2,10 +2,26 @@
 
 <html>
 	<head>
+		<meta name="description" content="roadtrip_snacks">
+		<meta name="author" content="Surya Sanjiv">
 		<title>{% block title %}{% endblock %}</title>
 		<meta charset="utf-8" />
+		<link rel="./css/style.css">
+		<link rel="./css/font_style.css">
 	</head>
 	<body>
+
+		<section id="header">
+			{% block header %} {% endblock %}
+    </section>
+
+		<section id="service">
+			{% block service %} {% endblock %}
+    </section>
+
+		<footer>
+      <p>Copyright &copy; 2019</p>
+    </footer>
 		{% block body %}
     {% endblock %}
 	</body>
