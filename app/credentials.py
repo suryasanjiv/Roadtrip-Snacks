@@ -1,6 +1,5 @@
 import spotipy
 import spotipy.oauth2 as oauth2
-import spotipy.util as util
 import os, sys
 from flask import Flask, request
 
@@ -11,8 +10,8 @@ SCOPE = 'user-library-read'
 CACHE = '.spotipyoauthcache'
 
 
-def promptUser(client_id, client_secret, redirect_uri):
-    sp_oauth = oauth2.SpotifyOAuth(client_id, client_secret,redirect_uri)
+def promptUser(id, secret, uri):
+    sp_oauth = oauth2.SpotifyOAuth(id, secret, uri)
     url = sp_oauth.get_authorize_url()
     code = sp_oauth.parse_response_code(url)
     sp_oauth.get_access_token(code)

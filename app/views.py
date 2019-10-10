@@ -5,9 +5,9 @@ from app import app
 from app import credentials
 from urllib import parse
 
-@app.route("/")
+@app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
 @app.route('/auth', methods = ['GET'])
 def gen_playlist():
